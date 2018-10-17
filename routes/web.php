@@ -18,7 +18,10 @@ Auth::routes();
 Route::resource('turnos','TurnoController');
 Route::resource('pacientes','PacienteController');
 Route::resource('osociales','OsocialController');
+Route::resource('tasks', 'TasksController');
 
+//Route::resource('tasks', 'TasksController@index')->name('tasks.index');
+//Route::post('/tasks', 'TasksController@postDate');
 Route::get('/registracion', 'ControladorDeRegistraciones@nuevo');
 Route::post('/registracion', 'ControladorDeRegistraciones@guardar');
 

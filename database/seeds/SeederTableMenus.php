@@ -68,11 +68,19 @@ class SeederTableMenus extends Seeder
         ]);
 
         //------------------------------------//
+        factory(Menu::class)->create([
+            'etiqueta'=>'Calendario',
+            'pagina'=>'tasks',
+            'padre'=>0,
+            'orden'=>4
+        ]);
+
+        //------------------------------------//
         $m5 = factory(Menu::class)->create([
             'etiqueta'=>'La Clinica',
             'pagina'=>'la_clinica',
             'padre'=>0,
-            'orden'=>4,
+            'orden'=>5,
         ]);
         factory(Menu::class)->create([
             'etiqueta'=>'Acerca de nosotros',

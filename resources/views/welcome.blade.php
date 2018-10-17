@@ -6,13 +6,16 @@
 
         <title>OPAW</title>
 
+        <!-- Linkeo de BS -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #bddee9;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -57,6 +60,15 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .links-top > a {
+                color:white;
+                padding: 0 25px;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -66,14 +78,14 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links-top">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-outline-light" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="btn-secondary" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="btn-success" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -85,7 +97,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://github.com/pikchu360/OdontologiaPaw.git">Documentation</a>
                     <a href="/">Otra</a>
                 </div>
             </div>
